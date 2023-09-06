@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HoloBot</title>
+</head>
+    <body>
+        <!-- Importazione THREE e loader di file GLTF per Three -->
+        <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+        <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+        <!-- Contenitore per il robot -->
+        <div id="Robot">
+            <!-- Codice JavaScript -->
+		    <script src="script.js"></script>
+        </div>
+
+        <!-- Contenitore per i pulsanti -->
+        <div id="pulsanti">
+
+            <button onclick="muoviArto(1, 'left_arm', -0.1, 5, 5, 0, 30)">Alza il braccio sinistro</button>
+            <button onclick="muoviArto(2, 'left_arm', 0.1, -5, -5, 0, 30)">Abbassa il braccio sinistro</button>
+
+            <button onclick="muoviArto(3, 'right_arm', -0.1, 5, 5, 0, 30)">Alza il braccio destro</button>
+            <button onclick="muoviArto(4, 'right_arm', 0.1, -5, -5, 0, 30)">Abbassa il braccio destro</button>
+
+            <button onclick="muoviArto(5, 'left_leg', -0.1, 5, 5, 0, 15)">Alza la gamba sinistra</button>
+            <button onclick="muoviArto(6, 'left_leg', 0.1, -5, -5, 0, 15)">Abbassa la gamba sinistra</button>
+
+            <button onclick="muoviArto(7, 'right_leg', -0.1, 5, 5, 0, 15)">Alza la gamba destra</button>
+            <button onclick="muoviArto(8, 'right_leg', 0.1, -5, -5, 0, 15)">Abbassa la gamba destra</button>
+        </div>
+
+        <!-- Footer della pagina -->
+        <footer>
+            <p>Holobot - Progetto alternaza alla Logical System as.2022/2023 di Scortechini e Sebastianelli</p>
+        </footer>
+    </body>
+</html>
